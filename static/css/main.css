@@ -1,0 +1,28 @@
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("../images/backgroundReduced.jpg");
+  background-size: cover;
+  font-family: "PT Sans", sans-serif;
+  width: 100%;
+  margin: auto;
+}
+
+#home {
+  font-size: 2rem;
+}
+
+.image {
+  width: 100%;
+  margin: auto;
+}
+
+.explanation {
+  padding: 1rem;
+  font-size: 1.5rem;
+}
