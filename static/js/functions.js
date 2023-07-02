@@ -60,8 +60,12 @@ async function showImages(interations) {
         author.innerHTML =
           '<span class="text-white">Author <i class="fa-sharp fa-solid fa-user" ></i></span>' +
           ` ${jsonData.copyright.toString()}`;
-      } catch (TypeError) {}
-      author.innerHTML = '<i class="fa-sharp fa-solid fa-user" ></i> Unknow';
+      } catch (TypeError) {
+        author.innerHTML = '<i class="fa-sharp fa-solid fa-user" ></i> Unknow';
+      }
+      // author.innerHTML =
+      //   '<span class="text-white">Author <i class="fa-sharp fa-solid fa-user" ></i></span>' +
+      //   ` ${jsonData.copyright.toString()}`;
 
       titles.append(title);
       titles.append(author);
@@ -74,10 +78,22 @@ async function showImages(interations) {
       explanation.className = "explanation";
       explanation.innerText = jsonData.explanation.toString();
 
+      const div = document.createElement("div");
+      div.className = "d-grid gap-2 col-6 mx-auto";
+      const saveButton = document.createElement("a");
+      saveButton.innerText = "Save";
+      saveButton.setAttribute("href", jsonData.hdurl);
+      saveButton.setAttribute("download", jsonData.hdurl);
+      saveButton.setAttribute("target", "__blank");
+      saveButton.className = "btn btn-primary";
+      div.append(saveButton);
+
+      //adding
       article.append(titles);
       article.append(author);
       article.append(img);
       article.append(explanation);
+      article.append(div);
 
       const dataView = document.getElementById("dataView");
       dataView.append(article);

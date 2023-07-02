@@ -1,5 +1,5 @@
 import showImages from "./functions.js";
 
 //executing
-const interations = 4;
+const interations = 5;
 showImages(interations);
