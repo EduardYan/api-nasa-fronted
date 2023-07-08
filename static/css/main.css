@@ -8,6 +8,19 @@ body {
 body {
   background-image: url("../images/backgroundReduced.jpg");
   background-size: cover;
+
+  /* background: #000428; 
+  background: -webkit-linear-gradient(
+    to right,
+    #004e92,
+    #000428
+  );
+  background: linear-gradient(
+    to right,
+    #004e92,
+    #000428
+  ); */
+
   font-family: "PT Sans", sans-serif;
   width: 100%;
   margin: auto;
@@ -23,6 +36,6 @@ body {
 }
 
 .explanation {
-  padding: 1rem;
-  font-size: 1.5rem;
+  padding: 0.5rem;
+  font-size: 1.4rem;
 }
